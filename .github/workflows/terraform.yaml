@@ -51,7 +51,7 @@ jobs:
         working-directory: terraform1
 
       - name: Terraform Plan
-        run: terraform plan -out=tfplan
+        run: terraform plan 
         working-directory: terraform
 
       - name: Terraform Apply
