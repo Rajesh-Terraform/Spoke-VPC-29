@@ -52,7 +52,7 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan 
-        working-directory: terraform
+        working-directory: terraform1
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/master'
