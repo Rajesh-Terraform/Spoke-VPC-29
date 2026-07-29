@@ -24,18 +24,8 @@ resource "aws_subnet" "private1" {
   }
 }
 
-resource "aws_subnet" "private2" {
 
-  vpc_id = aws_vpc.spoke.id
 
-  cidr_block = "10.1.1.0/24"
-
-  availability_zone = "ap-south-1b"
-
-  tags = {
-    Name = "Private-Subnet-2"
-  }
-}
 
 resource "aws_route_table_association" "private1" {
 
@@ -44,9 +34,3 @@ resource "aws_route_table_association" "private1" {
   route_table_id = aws_route_table.private.id
 }
 
-resource "aws_route_table_association" "private2" {
-
-  subnet_id = aws_subnet.private2.id
-
-  route_table_id = aws_route_table.private.id
-}     
